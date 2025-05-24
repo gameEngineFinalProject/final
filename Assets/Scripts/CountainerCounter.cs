@@ -12,12 +12,12 @@ public class CountainerCounter : BaseCounter
 
     public override void Interact(Player player)
     {
-        if (!player.HasKitchenObject())
+        if (player.HasKitchenObject())
         {
-            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
-            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
+            // 玩家手上有東西，將其銷毀
             OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
-            // Debug.Log(kitchenObjectTransform.GetComponent<KitchenObject>().GetKitchenObjectSO().objectName);
+            Destroy(player.GetKitchenObject().gameObject);
+            player.ClearKichenObject();
         }
 
 
