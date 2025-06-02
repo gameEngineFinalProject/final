@@ -1,17 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
 using System;
+using System.Collections;
+using UnityEngine;
 
 public class CountainerCounter : BaseCounter
 {
-    /*public void Start()
-    {
-        correctIcon.SetActive(false);
-        wrongIcon.SetActive(false);
-    }*/
-
     public event EventHandler OnPlayerGrabbedObject;
 
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
@@ -45,12 +37,16 @@ public class CountainerCounter : BaseCounter
             player.ClearKichenObject();
             scoreManager.AddScore(1);
 
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GetAudioClipRefs().Success, transform.position);
+
             StartCoroutine(ShowIcon(correctIcon));
         }
         else
         {
             // 丟錯物品，不處理或提示錯誤
             Debug.Log("錯誤物品，無法投入！");
+
+            SoundManager.Instance.PlaySound(SoundManager.Instance.GetAudioClipRefs().Fail, transform.position);
             StartCoroutine(ShowIcon(wrongIcon));
         }
         /*if (player.HasKitchenObject())
@@ -72,6 +68,6 @@ public class CountainerCounter : BaseCounter
         icon.SetActive(false);
     }
 
-   
+
 
 }
