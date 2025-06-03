@@ -9,7 +9,7 @@ public class GameInput : MonoBehaviour
 
     public event EventHandler OnPauseAction;
     public event EventHandler OnInteractAction;
-    public event EventHandler OnPauseAction;
+ 
 
     private PlayerInputActions playerInputActions;
     private bool isPaused = false;
