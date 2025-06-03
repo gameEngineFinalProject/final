@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
+<<<<<<< HEAD
   lastShownTimestamp: 1748934787
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
   checkedLastUpdateTimestamp: 1748934787
+=======
+  lastShownTimestamp: 1748932318
+  lastUpdateResponse:
+    version: 1.01
+    versionUrl: https://unitycodemonkey.com
+  checkedLastUpdateTimestamp: 1748932319
+>>>>>>> 349de752fda5efd1f4b7cef99b6ff80e6dd9bf7e
   lastQOTDResponse:
     questionId: 187
     questionText: 'Is this valid code?
@@ -32,18 +40,30 @@ MonoBehaviour:
     answerC: 
     answerD: 
     answerE: 
+<<<<<<< HEAD
   lastQotdTimestamp: 1748934787
+=======
+  lastQotdTimestamp: 1748932319
+>>>>>>> 349de752fda5efd1f4b7cef99b6ff80e6dd9bf7e
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/ultimateOverview70_6FreeUpdate.png
     topText: Learn how to use 70 Tools and Features! (Unity 6 Updated)
     topLink: ultimateunityoverview
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
+<<<<<<< HEAD
   lastDynamicHeaderTimestamp: 1748934787
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
   websiteLatestMessageTimestamp: 1748934787
+=======
+  lastDynamicHeaderTimestamp: 1748932319
+  websiteLatestMessage:
+    text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
+      Click here!</a>
+  websiteLatestMessageTimestamp: 1748932319
+>>>>>>> 349de752fda5efd1f4b7cef99b6ff80e6dd9bf7e
   websiteLatestVideos:
     videos:
     - youTubeId: U5Wolv65yK8
@@ -55,4 +75,8 @@ MonoBehaviour:
         Update)
     - youTubeId: 29ejb-nzO1A
       title: Is Schedule I a LOW EFFORT Game?
+<<<<<<< HEAD
   websiteLatestVideosTimestamp: 1748934787
+=======
+  websiteLatestVideosTimestamp: 1748932319
+>>>>>>> 349de752fda5efd1f4b7cef99b6ff80e6dd9bf7e
