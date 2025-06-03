@@ -25,9 +25,10 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParents
     public void SetKitchenObject(KitchenObject kitchenObject)
     {
         this.kitchenObject = kitchenObject;
-        if (kitchenObject != null)
+
+        if(kitchenObject != null)
         {
-            OnAnyObjectPlacedHere?.Invoke(this, EventArgs.Empty);
+            OnAnyObjectPlacedHere?.Invoke(this, EventArgs.Empty);   
         }
     }
     public KitchenObject GetKitchenObject()
