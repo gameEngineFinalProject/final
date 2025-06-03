@@ -48,6 +48,11 @@ public class SoundManager : MonoBehaviour
         PlaySound(audioClipRefsSO.Footstep, position, volume);
     }
 
+    public void PlayCountDownSound()
+    {
+       PlaySound(audioClipRefsSO.warning, Vector3.zero);
+    }
+
     public AudioClipRefsSO GetAudioClipRefs()
     {
         return audioClipRefsSO;

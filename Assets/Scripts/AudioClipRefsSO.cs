@@ -11,5 +11,8 @@ public class AudioClipRefsSO : ScriptableObject
     public AudioClip[] ObjectDrop;
     public AudioClip[] ObjectPickup;
 
+    public AudioClip[] warning;
+
+
 }
 
