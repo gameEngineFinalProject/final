@@ -23,6 +23,7 @@ public class GameOverUI : MonoBehaviour
     }
     private void Awake()
     {
+        
         restartButton.onClick.AddListener(() =>
         {
             Loader.Load(Loader.Scene.GameScene);
@@ -33,6 +34,7 @@ public class GameOverUI : MonoBehaviour
             Loader.Load(Loader.Scene.MainMenu);
         });
         Time.timeScale = 1f;
+
     }
 
     private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e)
@@ -50,7 +52,7 @@ public class GameOverUI : MonoBehaviour
 
     public void ShowGameOver()
     {
-        Time.timeScale = 0f; // 暫停遊戲
+       // Time.timeScale = 0f; // 暫停遊戲
         gameObject.SetActive(true);
         // recipeDeliveredText.text = "送出的食譜數量: " + recipesDelivered;
         scoreTextAtGameOver.text = "Final Score: " + ScoreManager.Instance.GetScore();
