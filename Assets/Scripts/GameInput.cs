@@ -16,6 +16,7 @@ public class GameInput : MonoBehaviour
 
     [Header("UI 元件")]
     [SerializeField] private Button pauseButton;
+    [SerializeField] private Button optionButton;
     [SerializeField] private TMP_Text pauseButtonText;
     [SerializeField] private Image pauseButtonImage;
     [SerializeField] private Sprite pauseSprite;
@@ -35,6 +36,10 @@ public class GameInput : MonoBehaviour
         {
             pauseButton.onClick.AddListener(OnPauseButtonClicked);
         }
+        if (optionButton != null)
+        {
+            optionButton.onClick.AddListener(OnPauseButtonClicked);
+        }
 
         UpdatePauseUI(); // 初始化顯示
     }
@@ -50,7 +55,7 @@ public class GameInput : MonoBehaviour
         OnPauseAction?.Invoke(this, EventArgs.Empty);
     }
 
-    private void OnPauseButtonClicked()
+    public void OnPauseButtonClicked()
     {
         TogglePause();
         OnPauseAction?.Invoke(this, EventArgs.Empty);
@@ -87,5 +92,7 @@ public class GameInput : MonoBehaviour
         {
             pauseButton.onClick.RemoveListener(OnPauseButtonClicked);
         }
+        playerInputActions.Dispose();
+
     }
 }

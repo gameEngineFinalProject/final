@@ -17,7 +17,7 @@ public class ButtonCounter :BaseCounter
     public override void Interact(Player player)
     {
         ClearCounter[] clearCounters = FindObjectsOfType<ClearCounter>();
-
+        
         if (!isReadyToSpawn)
         {
             // 確認所有 ClearCounter 是否都是空的
@@ -30,7 +30,7 @@ public class ButtonCounter :BaseCounter
                     break;
                 }
             }
-
+         
             if (allClearEmpty && !HasKitchenObject())
             {
                 // 所有清除櫃台為空，而且目前沒垃圾袋 → 生成垃圾袋

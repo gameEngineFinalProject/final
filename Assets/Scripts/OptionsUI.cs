@@ -16,6 +16,7 @@ public class OptionsUI : MonoBehaviour
     [SerializeField] private Button MoveLeftButton;
     [SerializeField] private Button MoveRightButton;
     [SerializeField] private Button InteractButton;
+    [SerializeField] private Button MenuButton;
     [SerializeField] private TextMeshProUGUI soundEffectsText;
     [SerializeField] private TextMeshProUGUI musicText;
     [SerializeField] private TextMeshProUGUI MoveUpText;
@@ -37,8 +38,15 @@ public class OptionsUI : MonoBehaviour
             UpdateVisual();
         });
         closeButton.onClick.AddListener(() => {
+            GameInput.Instance.OnPauseButtonClicked();
             Hide();
         });
+        MenuButton.onClick.AddListener(() => {
+            Loader.Load(Loader.Scene.MainMenu);
+            //Time.timeScale = 1f;
+        });
+
+
     }
 
     private void Start()
@@ -56,6 +64,7 @@ public class OptionsUI : MonoBehaviour
 
     public void Show()
     {
+
         gameObject.SetActive(true);
     }
     private void Hide()
