@@ -42,8 +42,10 @@ public class OptionsUI : MonoBehaviour
             Hide();
         });
         MenuButton.onClick.AddListener(() => {
+
+            Time.timeScale = 1f;
             Loader.Load(Loader.Scene.MainMenu);
-            //Time.timeScale = 1f;
+            
         });
 
 
