@@ -1997,7 +1997,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 6.313311, y: 2.4390335, z: -3.3893814}
-  m_LocalScale: {x: 0.25, y: 3, z: 15.419217}
+  m_LocalScale: {x: 0.25, y: 4.2490926, z: 15.419217}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389119622}
@@ -2905,7 +2905,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.268889, y: 2.4390335, z: -8.545382}
-  m_LocalScale: {x: 0.25, y: 3, z: 10.214259}
+  m_LocalScale: {x: 0.25, y: 4.1253, z: 10.214259}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389119622}
@@ -3085,7 +3085,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 18.09, y: 2.4046335, z: -8.430481}
-  m_LocalScale: {x: 8.018204, y: 2.8510346, z: 10.503074}
+  m_LocalScale: {x: 8.018204, y: 4.2218175, z: 10.503074}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389119622}
@@ -3131,7 +3131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90f0eed1477afe14b9e538e5bfa88cdc, type: 2}
+  - {fileID: 2100000, guid: 5b6d675e83b874744bd9164efa49b068, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3213,7 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.4144847, b: 0.6226415, a: 1}
+  m_Color: {r: 0.9685534, g: 0.9685534, b: 0.9685534, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4336,9 +4336,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1529425702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -883, y: -439}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 198, y: 48}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322749795
@@ -4407,7 +4407,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4643,7 +4643,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 6.4, y: 2.4046335, z: 0.1}
-  m_LocalScale: {x: 6.306403, y: 3.697792, z: 32.215797}
+  m_LocalScale: {x: 6.306403, y: 4.147444, z: 32.215797}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389119622}
@@ -4689,7 +4689,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90f0eed1477afe14b9e538e5bfa88cdc, type: 2}
+  - {fileID: 2100000, guid: 5b6d675e83b874744bd9164efa49b068, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6176,7 +6176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90f0eed1477afe14b9e538e5bfa88cdc, type: 2}
+  - {fileID: 2100000, guid: 5b6d675e83b874744bd9164efa49b068, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6496,7 +6496,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.961111, y: 2.4390335, z: -8.505081}
-  m_LocalScale: {x: 0.25, y: 3, z: 10.340019}
+  m_LocalScale: {x: 0.3716, y: 4.2369804, z: 10.340019}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389119622}
@@ -6713,9 +6713,9 @@ RectTransform:
   - {fileID: 760664880}
   m_Father: {fileID: 1529425702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438.8, y: -216}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -72, y: -59}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2047139876
