@@ -9,28 +9,34 @@ public class GameInput : MonoBehaviour
 
     public event EventHandler OnPauseAction;
     public event EventHandler OnInteractAction;
- 
 
     private PlayerInputActions playerInputActions;
-    private bool isPaused = false;
 
-    [SerializeField] private Button pauseButton;         // 暫停按鈕
-    [SerializeField] private TMP_Text pauseButtonText;   // 按鈕文字顯示
+    public bool IsPaused { get; private set; }
+
+    [Header("UI 元件")]
+    [SerializeField] private Button pauseButton;
+    [SerializeField] private TMP_Text pauseButtonText;
+    [SerializeField] private Image pauseButtonImage;
+    [SerializeField] private Sprite pauseSprite;
+    [SerializeField] private Sprite playSprite;
 
     private void Awake()
     {
         Instance = this;
+
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
 
         playerInputActions.Player.Interact.performed += Interact_performed;
         playerInputActions.Player.Pause.performed += Pause_performed;
 
-        // 綁定按鈕點擊事件
         if (pauseButton != null)
-            pauseButton.onClick.AddListener(TogglePause);
+        {
+            pauseButton.onClick.AddListener(OnPauseButtonClicked);
+        }
 
-        UpdatePauseButtonText(); // 初始化按鈕文字
+        UpdatePauseUI(); // 初始化顯示
     }
 
     private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -40,7 +46,13 @@ public class GameInput : MonoBehaviour
 
     private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        TogglePause(); // 按下 ESC 或綁定的鍵也觸發暫停
+        TogglePause();
+        OnPauseAction?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void OnPauseButtonClicked()
+    {
+        TogglePause();
         OnPauseAction?.Invoke(this, EventArgs.Empty);
     }
 
@@ -52,30 +64,28 @@ public class GameInput : MonoBehaviour
 
     public void TogglePause()
     {
-        isPaused = !isPaused;
-
-        // 切換時間流動
-        Time.timeScale = isPaused ? 0f : 1f;
-
-        // 更新按鈕顯示文字
-        UpdatePauseButtonText();
+        IsPaused = !IsPaused;
+        Time.timeScale = IsPaused ? 0f : 1f;
+        UpdatePauseUI();
     }
 
-    public void UpdatePauseButtonText()
+    private void UpdatePauseUI()
     {
-        if (pauseButtonText != null)
+        // 更新圖片
+        if (pauseButtonImage != null)
         {
-            pauseButtonText.text = isPaused ? "Continue" : "Pause";
+            pauseButtonImage.sprite = IsPaused ? playSprite : pauseSprite;
         }
     }
 
     private void OnDestroy()
     {
-        // 移除事件綁定
         playerInputActions.Player.Interact.performed -= Interact_performed;
         playerInputActions.Player.Pause.performed -= Pause_performed;
 
         if (pauseButton != null)
-            pauseButton.onClick.RemoveListener(TogglePause);
+        {
+            pauseButton.onClick.RemoveListener(OnPauseButtonClicked);
+        }
     }
 }
