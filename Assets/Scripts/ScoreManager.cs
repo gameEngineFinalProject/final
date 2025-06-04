@@ -10,8 +10,28 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
 
+    private void Start()
+    {
+        KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
+        Show();
+    }
+
+    private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e)
+    {
+        if (KitchenGameManager.Instance.isGameOver())
+        {
+            Hide();
+
+        }
+        else
+        {
+            Show();
+        }
+    }
+
     private void Awake()
     {
+       
         if (Instance != null)
         {
             Debug.LogError("多個 ScoreManager 存在！");
@@ -36,5 +56,13 @@ public class ScoreManager : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+    private void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+    private void Show()
+    {
+        gameObject.SetActive(true);
     }
 }
